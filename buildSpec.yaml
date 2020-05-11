@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+
+    commands:
+      - echo ./deploy.sh -i
+
+  pre_build:
+    commands:
+      - echo prebuild
+
+  build:
+    commands:
+      - ./deploy.sh -b
+
+  post_build:
+    commands:
+      - echo post_build2
+      
+  artifacts:
+    files:
+      - template.yaml
+    name: upbCodepipeline
