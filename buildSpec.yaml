@@ -1,3 +1,4 @@
+  
 version: 0.2
 
 phases:
@@ -6,11 +7,12 @@ phases:
       python: 3.7
 
     commands:
-      - echo ./deploy.sh -i
+      - ./deploy.sh -i
 
   pre_build:
     commands:
-      - echo prebuild
+      - echo buil
+
 
   build:
     commands:
@@ -18,9 +20,9 @@ phases:
 
   post_build:
     commands:
-      - echo post_build3
-      
-  artifacts:
-    files:
-      - template.yaml
-    name: upbCodepipeline
+      - echo post_build
+
+artifacts:
+  files:
+    - template.yaml
+  name: upbCodepipeline
